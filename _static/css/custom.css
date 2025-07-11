@@ -63,3 +63,38 @@ a.current{
   font-weight: bold;
 }
 
+/* Image spacing */
+
+.spacing-b10 {
+  margin-bottom: 10px;
+}
+
+.spacing-b20 {
+  margin-bottom: 20px;
+}
+
+.spacing-b30 {
+  margin-bottom: 30px;
+}
+
+
+/* Buttons */
+
+.button1 {
+    font-size: 1.0rem;        
+    padding: 50px 20px 50px;       
+    border-radius: 5px;         
+    background-color: #6089BA;   /* Aangepaste achtergrondkleur */
+    color: #000000;                /* Tekstkleur */
+    border: none;               
+    text-decoration: none;       
+    display: inline-block;       
+    font-weight: bold;
+}
+
+.button1:hover {
+    background-color: #B8D1EB;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
