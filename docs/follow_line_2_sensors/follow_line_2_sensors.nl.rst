@@ -1,8 +1,8 @@
 :orphan:
 
-.. _1-line-sensor:
+.. _2-line-sensors:
 
-Lijnvolgen met 1 sensor
+Lijnvolgen met 2 sensoren
 ######################
 
 .. article-info::
@@ -12,9 +12,9 @@ Lijnvolgen met 1 sensor
 1
 ---
 
-In deze workshop leer je hoe je de robot een lijn kunt laten volgen. Dit doe je met één lijnvolgsensor.
+In deze workshop leer je hoe je de robot een lijn kunt laten volgen. Dit doe je met twee lijnvolgsensoren.
 
-Controleer eerst of er een lijnvolgsensor op de robot is aangesloten. Is dat nog niet zo? Sluit dan eerst de lijnvolgsensor aan. De foto's hieronder laten zien hoe een lijnvolgsensor eruit niet, waar deze op de robot moet zitten en hoe je het kunt aansluiten.
+Controleer eerst of er twee lijnvolgsensoren op de robot zijn aangesloten. Is dat nog niet zo? Sluit dan eerst de lijnvolgsensoren aan. De foto's hieronder laten zien hoe een lijnvolgsensor eruit niet, waar deze op de robot moet zitten en hoe je het kunt aansluiten.
 
 
 2
@@ -27,30 +27,33 @@ Controleer eerst of er een lijnvolgsensor op de robot is aangesloten. Is dat nog
 
       Om een robot zelf een lijn te laten volgen, heb je een programma nodig. Zo'n programma heet ook wel een algoritme: een stap-voor-stap plan dat de robot vertelt wat het moet doen. Er zijn verschillende manieren om dit te maken, maar in deze workshop leer je de Bang-Bang methode. Dat is een eenvoudige manier waarbij de robot snel wisselt tussen links en rechts sturen.
 
-      De robot heeft één lijvolgsensor aan de onderkant. Die kan meten of de robot op een zwarte lijn rijdt of niet. In de workshop 'Licht meten' heb je geleerd welke getallen de sensor gebruikt om zwart of wit te herkennen.
+      De robot heeft twee lijvolgsensoren aan de onderkant. Deze meten of de robot op een zwarte lijn rijdt of niet. In de workshop 'Licht meten' heb je geleerd welke getallen de sensor gebruikt om zwart of wit te herkennen.
 
       **Vraag**
 
       Bekijk de afbeelding hiernaast. 
 
-      - Wat moet de robot doen als de sensor de zwarte lijn ziet (situatie 1)? 
-      - Wat moet de robot doen als de sensor wit ziet (situatie 2)?
+      - Wat moet de robot doen als beide sensoren wit herkennen (situatie 1)? 
+      - Wat moet de robot doen als de rechter sensor zwart herkent en de linker sensor wit herkent (situatie 2)? 
+      - Wat moet de robot doen als de linker sensor zwart herkent en de rechter sensor wit herkent (situatie 3)?
 
       .. dropdown:: :octicon:`comment` Klik hier voor het antwoord
 
-         Omdat er maar één sensor is, kan de robot niet precies in het midden van de lijn blijven. In plaats daarvan laat je de robot steeds heen en weer bewegen:
+         Omdat de robot twee sensoren heeft (één links en één rechts) kan het beter bepalen waar de lijn is.
 
-         - Ziet het zwart, dan stuurt het naar wit.
+         - Ziet de linker sensor zwart en de rechter sensor wit, dan zit de robot iets te ver rechts. Het stuurt dan naar links.
 
-         - Ziet het wit, dan stuurt het terug naar zwart.
+         - Ziet de rechter sensor zwart en de linker sensor wit, dan zit de robot iets te ver links. Het stuurt dan naar rechts.
 
-         Zo blijft de robot als het ware stuiteren tegen de lijn aan, en raakt het de lijn niet kwijt.
+         - Als beide sensoren wit zien, dan rijdt de robot recht vooruit, netjes over de lijn.
+
+         De robot kan hierdoor steeds een klein beetje corrigeren, waardoor het mooi in het midden van de lijn blijft.
 
    .. grid-item::
 
-      .. image:: _media/situatie-1-sensor.png
+      .. image:: _media/situatie-2-sensors.png
          :width: 500
-         :alt: Bang Bang method explained in drawing with one sensor
+         :alt: Bang Bang method explained in drawing with two sensors
 
 
 .. dropdown:: :octicon:`dependabot` Hoe werkt een lijnvolgsensor?
@@ -66,6 +69,7 @@ Controleer eerst of er een lijnvolgsensor op de robot is aangesloten. Is dat nog
 
 3
 ---
+
 Probeer nu een programma te schrijven waarmee de robot een lijn kan volgen. Ga via een nieuw tabblad op internet naar: **mirte.local** en gebruik de blokken om een programma te schrijven.
 
 Kom je er even niet uit? Gebruik dan de tips in het 'Help'-menu hieronder. Op de volgende pagina staat een voorbeeldprogramma, maar probeer het eerst zelf! Er zijn namelijk meerdere manieren om dit op te lossen.
@@ -90,11 +94,12 @@ Kom je er even niet uit? Gebruik dan de tips in het 'Help'-menu hieronder. Op de
 
 4
 ---
+
 Hieronder staat een voorbeeldprogramma afgebeeld. Deze klopt alleen nog niet helemaal. Kun jij het programma afmaken?
 
-.. image:: _media/blockly-lijnvolgen-1sensor-nl.png
-         :width: 500
-         :alt: Blockly code for line following with 1 sensor
+.. image:: _media/blockly-lijnvolgen-2sensors-nl.png
+         :width: 800
+         :alt: Voorbeeldcode lijnvolgen met 2 sensoren
 
 Op de volgende pagina staat het antwoord.
 
@@ -110,8 +115,8 @@ Hieronder is het antwoord van het voorbeeldprogramma afgebeeld.
 - Let goed op dat alle groter dan (>) en kleiner dan (<) tekens de goede kant op staan.
 
 
-.. image:: _media/blockly-lijnvolgen-1sensor-nl-antwoord.png
-   :width: 500
+.. image:: _media/blockly-lijnvolgen-2sensors-nl-antwoord.png
+   :width: 800
    :alt: Antwoord van voorbeeldcode lijnvolgen met 2 sensoren
 
 

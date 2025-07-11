@@ -1,5 +1,7 @@
 :orphan:
 
+.. _my-reference-label:
+
 Line following
 ################################
 
