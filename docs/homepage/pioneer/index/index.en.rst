@@ -1,3 +1,5 @@
+:orphan:
+
 .. card:: Assemble
     :link: ../workshops/assemble
 

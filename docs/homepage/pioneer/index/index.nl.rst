@@ -1,3 +1,5 @@
+:orphan:
+
 .. card:: Robot bouwen
     :link: ../workshops/assemble
 

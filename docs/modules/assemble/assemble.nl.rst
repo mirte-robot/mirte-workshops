@@ -390,7 +390,7 @@ goed te volgen, heb je aan het eind een Mirte robot.
 
 
 Klaar!
-----
+------
 
 Je hebt nu de MIRTE Pioneer robot in elkaar gezet. Je kan aan aan de slag met 
 een andere MIRTE Pioneer workshop.
@@ -398,84 +398,3 @@ een andere MIRTE Pioneer workshop.
 .. image:: _media/16_step0.png
    :width: 500
    :loading: lazy
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

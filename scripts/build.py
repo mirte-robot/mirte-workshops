@@ -11,7 +11,7 @@ os.system(f'ln -s {cwd}/docs/modules ./docs/{args.dir}')
 os.system(f'ln -s {cwd}/_static ./docs/{args.dir}')
 os.system(f'ln -s {cwd}/_templates ./docs/{args.dir}')
 os.system(f'ln -s {cwd}/conf.py ./docs/{args.dir}')
-#TODO: include conf.py locally so author can be overridden
+#TODO: include conf.py locally so author can be overridden (or have conf read another conf.py/conf.json)
 
 
 # Open the articles.json file
@@ -27,9 +27,9 @@ else:
 dir = args.dir if args.dir != "homepage" else ""
 
 for lang in data['languages']:
-    os.system(f'sphinx-build "./docs/{args.dir}" "_build/html/{lang["short"]}/{dir}" -t lang_{lang["short"]}')
-
-shutil.copyfile('scripts/index.html', '_build/html/index.html')
+    os.chdir(f'./docs/{args.dir}')
+    os.system(f'sphinx-build "." "{cwd}/_build/html/{lang["short"]}/{dir}" -t lang_{lang["short"]}')
+    os.chdir(f'{cwd}')
 
 # Remove symlink to all modules
 os.system(f'rm ./docs/{args.dir}/modules')

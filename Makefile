@@ -7,7 +7,7 @@ SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = ./docs/workshops/pioneer_line_follow
 BUILDDIR      = _build
-DIRS          = workshops/nlt workshops/pioneer_line_follow homepage workshops/assemble
+DIRS          = workshops/pioneer_line_follow homepage workshops/assemble
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -17,15 +17,16 @@ help:
 .PHONY: help Makefile
 .PHONY: build_en
 build_lang:
-	python scripts/build.py --dir=$(DIR)
-#	python scripts/dedup.py --dir=$(DIR)
-	python scripts/create_pwa.py
+	python3 scripts/build.py --dir=$(DIR)
+#	python3 scripts/dedup.py --dir=$(DIR)
+	python3 scripts/create_pwa.py
 # python will fail if not in venv
 
 build_all:
 	@for dir in $(DIRS); do \
 		$(MAKE) build_lang DIR=$$dir; \
 	done
+	cp scripts/index.html _build/html/index.html
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).

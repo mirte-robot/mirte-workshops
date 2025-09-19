@@ -4,7 +4,7 @@ Please select the MIRTE robot you are using:
 
     .. grid-item-card::  MIRTE Lite
        :img-bottom: /_static/media/MIRTE_lite_obstacle_sensor_transparant.png
-       :link: lite/index
+       :link: ../lite/index
        :link-type: doc
 
     .. grid-item-card::  MIRTE Basic (WIP)
@@ -15,7 +15,7 @@ Please select the MIRTE robot you are using:
 
     .. grid-item-card::  MIRTE Pioneer
        :img-bottom: /_static/media/MIRTE_pioneer_transparant.png
-       :link: pioneer/index
+       :link: ../pioneer/index
        :link-type: doc
 
     .. grid-item-card::  MIRTE Master (WIP)

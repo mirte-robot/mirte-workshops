@@ -38,7 +38,7 @@ lang_long = ""
 for lang_opt in articles_settings["languages"]:
     print("Checking for lang: " + str(lang_opt))
     # print(tags.tags)
-    if(f'lang_{lang_opt["short"]}' in tags.tags.keys()):
+    if f'lang_{lang_opt["short"]}' in tags:
         lang = lang_opt["short"]
         lang_long = lang_opt["long"]
         print(f"Found lang: {lang}")
@@ -54,7 +54,7 @@ except:
 
 def getArticles():
     articles = []
-    for dirpath, dirnames, filenames in os.walk('.'):
+    for dirpath, dirnames, filenames in os.walk('.', followlinks=True):
         for filename in filenames:
             if filename.endswith('.rst'):
                 full_path = os.path.join(dirpath, filename)

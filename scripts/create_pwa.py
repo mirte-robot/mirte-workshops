@@ -17,7 +17,7 @@ for file_path in BUILD_DIR.rglob("*"):
         urls.append(url)
 
 # TODO: copy these to sw.js
-print(urls);
+#print(urls);
 
 # Save to _static so it gets copied by Sphinx
 output_path = BUILD_DIR / "_static" / "precache-files.json"

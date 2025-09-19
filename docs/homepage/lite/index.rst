@@ -1,3 +1,5 @@
+:orphan:
+
 MIRTE Lite workshops
 ====================
 

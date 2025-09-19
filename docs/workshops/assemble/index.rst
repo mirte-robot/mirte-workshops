@@ -4,8 +4,8 @@
    :hidden:
 
    self
-   modules/parts/parts
-   modules/assemble/assemble
-   modules/wakeup/wakeup
+   ../../modules/parts/parts
+   ../../modules/assemble/assemble
+   ../../modules/wakeup/wakeup
 
 .. include:: index/index.rst

@@ -1,3 +1,5 @@
+:ophan:
+
 .. card:: Design and Discover
     :link: https://slides.mirte.org/lite
 
