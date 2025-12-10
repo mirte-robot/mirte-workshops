@@ -3,7 +3,7 @@
 .. _obstacles_ir:
 
 Obstakels ontwijken met IR sensoren
-######################
+###################################
 
 .. article-info::
     :author: :fa:`brain` Programmeren

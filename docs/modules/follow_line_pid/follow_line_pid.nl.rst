@@ -3,7 +3,7 @@
 .. _pid:
 
 Lijnvolgen met PID programma
-######################
+############################
 
 .. article-info::
     :author: :fa:`brain` Programmeren

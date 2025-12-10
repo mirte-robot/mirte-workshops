@@ -3,7 +3,7 @@
 .. _obstacles_ultrasonic:
 
 Obstakels ontwijken met ultrasoonsensoren
-######################
+#########################################
 
 .. article-info::
     :author: :fa:`brain` Programmeren

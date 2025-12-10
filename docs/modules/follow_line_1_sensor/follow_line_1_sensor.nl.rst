@@ -1,9 +1,7 @@
 :orphan:
 
-.. _1-line-sensor:
-
 Lijnvolgen met 1 sensor
-######################
+#######################
 
 .. article-info::
     :author: :fa:`brain` Programmeren

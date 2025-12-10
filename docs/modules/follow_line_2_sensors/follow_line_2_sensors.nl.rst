@@ -3,7 +3,7 @@
 .. _2-line-sensors:
 
 Lijnvolgen met 2 sensoren
-######################
+##########################
 
 .. article-info::
     :author: :fa:`brain` Programmeren
