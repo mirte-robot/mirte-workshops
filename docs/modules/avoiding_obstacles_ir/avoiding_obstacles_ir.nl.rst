@@ -32,9 +32,7 @@ In deze workshop leer je hoe je MIRTE obstakels kunt laten ontwijken met behulp 
 
    .. grid-item::
 
-      .. image:: _media/situatie-1-sensor.png
-         :width: 500
-         :alt: Bang Bang method explained in drawing with one sensor
+      WIP _media/situatie-1-sensor.png
 
 
 .. dropdown:: :octicon:`dependabot` Obstakelsensor
@@ -69,6 +67,6 @@ Kom je er niet helemaal uit? Gebruik dan de tips in het 'Help'-menu hieronder. O
 ---
 Hieronder staat een voorbeeld programma afgebeeld. Deze klopt alleen nog niet helemaal. Kun jij het programma afmaken?
 
-.. image:: _media/voorbeeld_code_lijnvolgen.png
+.. .. image:: _media/voorbeeld_code_lijnvolgen.png
          :width: 500
          :alt: Blockly code for line following with 1 sensor

@@ -17,7 +17,8 @@ De MIRTE robot kan zelfstandig en op verschillende manieren een lijn volgen. Kie
 
    .. grid-item::
 
-      .. button-ref:: modules/follow_line_1_sensor/follow_line_1_sensor
+      .. button-ref:: ../follow_line_1_sensor/follow_line_1_sensor
+         :ref-type: doc
          :class: button1
 
          Lijnvolgen met 1 sensor
@@ -25,7 +26,8 @@ De MIRTE robot kan zelfstandig en op verschillende manieren een lijn volgen. Kie
 
    .. grid-item::
 
-      .. button-ref:: 2-line-sensors
+      .. button-ref:: ../follow_line_2_sensors/follow_line_2_sensors
+         :ref-type: doc
          :class: button1
 
          Lijnvolgen met 2 sensoren
@@ -33,7 +35,8 @@ De MIRTE robot kan zelfstandig en op verschillende manieren een lijn volgen. Kie
 
    .. grid-item::
 
-      .. button-ref:: pid
+      .. button-ref:: ../follow_line_pid/follow_line_pid
+         :ref-type: doc
          :class: button1
 
          Lijnvolgen met een PID programma
