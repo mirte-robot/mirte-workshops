@@ -3,7 +3,7 @@
 $ python3 -m venv docs-env
 $ source docs-env/bin/activate
 (docs-env)$ pip install -r requirements.txt
-(docs-env)$ make build_lang
+(docs-env)$ make build_all
 (docs-env)$ python3 -m http.server
 
 

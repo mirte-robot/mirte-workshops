@@ -20,4 +20,4 @@
    docs/avoiding_obstacles_ultrasonic/avoiding_obstacles_ultrasonic
    docs/camera/camera
 
-.. include:: docs/index/index.rst
+.. include:: docs/modules/index/index.rst

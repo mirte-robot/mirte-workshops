@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="mirte_line_1_sensor_theory.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.76435185"
+     inkscape:cx="396.41429"
+     inkscape:cy="561.91399"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.383299"
+       id="rect3315"
+       width="18.161917"
+       height="178.26924"
+       x="79.986801"
+       y="33.923073" />
+    <path
+       id="path2756"
+       style="fill:#e6cf8c;fill-opacity:0.61580384;fill-rule:evenodd;stroke-width:0.676207"
+       d="m 64.038464,80.824623 c 22.194764,-20.138945 47.309436,-26.740131 79.615376,0 v 91.384627 c -24.31771,16.28554 -49.802732,24.01066 -79.615376,0 z"
+       sodipodi:nodetypes="ccccc" />
+    <rect
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264583"
+       id="rect4251"
+       width="15.230769"
+       height="36.346153"
+       x="63.692307"
+       y="105.92307" />
+    <rect
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264583"
+       id="rect4251-6"
+       width="15.230769"
+       height="36.346153"
+       x="128.25066"
+       y="105.92307" />
+    <rect
+       style="fill:#3cff00;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264583"
+       id="rect4487"
+       width="4.8461537"
+       height="5.8846154"
+       x="99.692307"
+       y="81" />
+    <rect
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.383299"
+       id="rect3315-1"
+       width="18.161917"
+       height="178.26924"
+       x="183.59872"
+       y="33.784622" />
+    <path
+       id="path2756-6"
+       style="fill:#e6cf8c;fill-opacity:0.615804;fill-rule:evenodd;stroke-width:0.676207"
+       d="m 159.18452,80.685552 c 22.19476,-20.138928 47.30943,-26.740115 79.61537,0 v 91.384618 c -24.31771,16.28554 -49.80273,24.01066 -79.61537,0 z"
+       sodipodi:nodetypes="ccccc" />
+    <rect
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264583"
+       id="rect4251-4"
+       width="15.230769"
+       height="36.346153"
+       x="158.83774"
+       y="105.78477" />
+    <rect
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264583"
+       id="rect4251-6-0"
+       width="15.230769"
+       height="36.346153"
+       x="223.39603"
+       y="105.78477" />
+    <rect
+       style="fill:#3cff00;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264583"
+       id="rect4487-3"
+       width="4.8461537"
+       height="5.8846154"
+       x="194.83768"
+       y="80.861732" />
+  </g>
+</svg>

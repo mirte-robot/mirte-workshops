@@ -1,0 +1,39 @@
+digraph graphname {
+	graph [bb="0,0,368.28,91",
+		compound=True,
+		rank=same,
+		rankdir=LR,
+		ranksep=0.2
+	];
+	node [label="\N"];
+	subgraph cluster___mirte {
+		graph [bb="191.28,8,360.28,83",
+			compound=True,
+			label="/mirte",
+			lheight=0.21,
+			lp="275.78,71.5",
+			lwidth=0.61,
+			rank=same,
+			rankdir=LR,
+			ranksep=0.2,
+			style=bold
+		];
+		t___mirte__distance__left	[URL=topic_3A__mirte__distance__left,
+			height=0.5,
+			label="/mirte/distance/left",
+			pos="275.78,34",
+			shape=box,
+			tooltip="topic:/mirte/distance/left",
+			width=2.125];
+	}
+	n___mirte_telemetrix	[URL=__mirte_telemetrix,
+		height=0.5,
+		label="/mirte_telemetrix",
+		pos="91.642,34",
+		shape=ellipse,
+		tooltip="/mirte_telemetrix",
+		width=2.5456];
+	n___mirte_telemetrix -> t___mirte__distance__left	[edgetooltip="Publisher\nnode_name: /mirte_telemetrix\ntopic_name: /mirte/distance/left\nQoS settings\n- reliability: reliable\n- durability: transient_local\n- lifespan: 9223372036854775807 ns\n- deadline: 9223372036854775807 ns\n- liveliness: automatic\n- liveliness_lease_duration: 9223372036854775807 ns\n- avoid_ros_namespace_conventions: False",
+		penwidth=1,
+		pos="e,199.15,34 183.45,34 185.25,34 187.06,34 188.87,34"];
+}

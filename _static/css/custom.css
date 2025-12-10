@@ -6,15 +6,10 @@
 /* Fix for dark mode */
 body {
   background-color: var(--pst-color-background) !important; 
+  color: var(--pst-color-text-base) !important; 
 }
 
 #rtd-footer-container{
-  display: none !important;
-}
-
-/* Fix for the scrollbar issue in books theme: */
-/* https://github.com/executablebooks/sphinx-book-theme/issues/732 */
-.theme-switch-button{
   display: none !important;
 }
 
@@ -51,6 +46,10 @@ h1{
   text-transform: uppercase;
 }
 
+nav.bd-links .current>a{
+  box-shadow: unset;
+}
+
 li.current{
   background-color: #9db7be;
 }
@@ -64,7 +63,6 @@ a.current{
 }
 
 /* Image spacing */
-
 .spacing-b10 {
   margin-bottom: 10px;
 }
@@ -77,9 +75,7 @@ a.current{
   margin-bottom: 30px;
 }
 
-
 /* Buttons */
-
 .button1 {
     font-size: 1.0rem;        
     padding: 50px 20px 50px;       
@@ -97,4 +93,9 @@ a.current{
     color: #000000;
     text-decoration: none;
     font-weight: bold;
+}
+.disabled-card {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
 }

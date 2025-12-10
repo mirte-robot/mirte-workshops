@@ -22,7 +22,7 @@ jobs:
           python3 -m venv docs-env
           . docs-env/bin/activate
           pip install -r requirements.txt
-          make build_lang
+          make build_all
           cd _build/html
           zip -r ../../site.zip .
           cd ../../
@@ -30,12 +30,12 @@ jobs:
       #   run: |
       #     curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
       #     sudo apt-get install -y nodejs        
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: dist
-          path: |
-            _build/html
+      #- name: Archive production artifacts
+      #  uses: actions/upload-artifact@v4
+      #  with:
+      #    name: dist
+      #    path: |
+      #      _build/html
       # - name: Archive production artifacts for act
       #   uses: actions/upload-artifact@v4
       #   with:

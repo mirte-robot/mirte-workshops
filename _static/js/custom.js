@@ -116,82 +116,31 @@ fetch(`${path}js/articles.json`)
 .then(response => response.json())
 .then(data => {
   global_article_data = data;
-  check_if_other_lang(data);
+
+  create_lang_switcher(get_current_lang(data), data);
 });
 }
 
 function get_current_lang(article_data) {
   let current_url = window.location.href;
   let current_url_parts = current_url.split('/');
-  console.log(current_url_parts)
-
   current_url_parts = current_url_parts.filter((part) => article_data.languages.map((l) => l.short).includes(part));
-  console.log(current_url_parts)
-  console.log(current_url_parts.length)
   return current_url_parts[0];
 }
 
-function get_article_name() {
-  let current_url = window.location.href;
-  let current_url_parts = current_url.split('/');
-  let current_page = current_url_parts[current_url_parts.length - 1];
-  let current_page_parts = current_page.split('.');
-  let current_page_name = current_page_parts[0];
-  return current_page_name;
-}
-
-function check_if_other_lang(article_data) {
-  // read _static/js/articles.json
-  // check if the current page is in the list of articles
-  // if it is, then show the language selector
-  // if it is not, then hide the language selector
-  let current_page_name = get_article_name();
-  console.log(article_data)
-  console.log(current_page_name)
-  console.log(get_current_lang(article_data))
-  if(article_data.articles.includes(current_page_name)) {
-    create_lang_switcher(current_page_name, get_current_lang(article_data), article_data);
-  }else {
-    // hide the language selector
-    let lang_selector = document.getElementById('lang-selector');
-    lang_selector.style.display = 'none';
-  }
-
-}
-
-function create_lang_switcher(article, lang, article_data) {
+function create_lang_switcher(lang, article_data) {
+  console.log(lang);
   let header = document.getElementsByClassName('article-header-buttons')[0];
   let options = article_data.languages.map((l) => {
     return `<option value="${l.short}" ${l.short == lang? "selected" : ''}>${l.long}</option>`;
   });
-  let lang_selector = `<select id="lang-selector" onchange="change_lang(this.value)"> ${options.join('')} </select>`;
+  let lang_selector = `<select id="lang-selector" onchange="change_lang('${lang}', this.value)"> ${options.join('')} </select>`;
   appendHtml(header, lang_selector);
 }
 
-function get_root() {
-  let static = get_static_path();
-  static = static.split('/').slice(0, -2).join('/')+'/'; // root of the current language
-  let curr_lang = get_current_lang(global_article_data);
-  let default_lang = global_article_data.default_language;
-  if(static.endsWith(curr_lang+'/') || static.endsWith(default_lang+'/')) {
-    return static.split('/').slice(0, -2).join('/')+'/';
-  }
-  return static;
-}
-
-
-function change_lang(lang) {
-  let current_article = get_article_name();
-  let root = get_root();
-  console.log(root, current_article, lang)
-  console.log(lang)
-  // url is root/lang/docs/article/article.html#hash
-  let hash = window.location.hash;
-  let new_url = `${root}${lang}/docs/${current_article}/${current_article}.html${hash}`;
-  if(current_article == "index") {
-    new_url = `${root}${lang}/index.html${hash}`;
-  }
-  console.log(new_url)
+function change_lang(old_lang, new_lang) {
+  let current_url = window.location.href;
+  let new_url = current_url.replace(`/${old_lang}/`, `/${new_lang}/`);
   window.location = new_url;
 }
 

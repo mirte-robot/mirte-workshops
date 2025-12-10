@@ -1,7 +1,4 @@
 {
-    "articles": [
-        "assemble", "drive", "index", "parts", "wakeup", "line_sensor", "follow_line_1_sensor", "loops_functions", "what_if", "follow_line", "camera", "follow_line_2_sensors", "follow_line_pid", "avoiding_obstacles", "avoiding_obstacles_ir", "avoiding_obstacles_ultrasonic"
-    ],
     "languages": [
         {
             "short": "nl",
