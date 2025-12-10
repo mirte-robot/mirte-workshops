@@ -13,7 +13,8 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
-import glob, subprocess, sys, time, os, json
+import subprocess, sys, os, json
+from pathlib import Path
 
 # Get git information
 try:
@@ -180,7 +181,9 @@ language = lang
 
 def remove_copied_files(app, exception):
     for file in app.articles:
-        os.remove("./" + file + ".rst")
+        path = Path(f"{file}.rst")
+        if path.exists():
+            path.unlink()
 
 
 def setup(app):

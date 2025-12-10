@@ -8,10 +8,29 @@ args = parser.parse_args()
 
 # Add symlinks to all the modules
 cwd = os.getcwd()
-os.system(f'ln -s {cwd}/docs/modules ./docs/{args.dir}')
-os.system(f'ln -s {cwd}/_static ./docs/{args.dir}')
-os.system(f'ln -s {cwd}/_templates ./docs/{args.dir}')
-os.system(f'ln -s {cwd}/conf.py ./docs/{args.dir}')
+
+
+# Cross-platform linkgin/copying of folders
+# Windows dows not have symlinks (without admin)
+def link_or_copy(src, dst):
+    src_path = Path(src)
+    dst_path = Path(dst)
+
+    if dst_path.exists():
+        if dst_path.is_dir():
+            shutil.rmtree(dst_path)
+        else:
+            dst_path.unlink()
+
+    if src_path.is_dir():
+        shutil.copytree(src_path, dst_path)
+    else:
+        shutil.copyfile(src_path, dst_path)
+
+link_or_copy(f'{cwd}/docs/modules', f'./docs/{args.dir}/modules')
+link_or_copy(f'{cwd}/_static',       f'./docs/{args.dir}/_static')
+link_or_copy(f'{cwd}/_templates',    f'./docs/{args.dir}/_templates')
+link_or_copy(f'{cwd}/conf.py',       f'./docs/{args.dir}/conf.py')
 #TODO: include conf.py locally so author can be overridden (or have conf read another conf.py/conf.json)
 
 
@@ -34,8 +53,17 @@ for lang in data['languages']:
         os.system(f'sphinx-build "." "{cwd}/_build/html/{lang["short"]}/{dir}" -t lang_{lang["short"]}')
     os.chdir(f'{cwd}')
 
+
+def remove_path(path):
+    p = Path(path)
+    if p.exists():
+        if p.is_dir():
+            shutil.rmtree(p)
+        else:
+            p.unlink()
+            
 # Remove symlink to all modules
-os.system(f'rm ./docs/{args.dir}/modules')
-os.system(f'rm ./docs/{args.dir}/_static')
-os.system(f'rm ./docs/{args.dir}/_templates')
-os.system(f'rm ./docs/{args.dir}/conf.py')
+remove_path(f'./docs/{args.dir}/modules')
+remove_path(f'./docs/{args.dir}/_static')
+remove_path(f'./docs/{args.dir}/_templates')
+remove_path(f'./docs/{args.dir}/conf.py')
