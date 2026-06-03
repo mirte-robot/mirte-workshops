@@ -18,6 +18,7 @@ Please select the MIRTE robot you are using:
        :link: ../pioneer/index
        :link-type: doc
 
-    .. grid-item-card::  MIRTE Master (WIP)
-       :img-bottom: /_static/media/MIRTE_master.jpg
-       :class-card: disabled-card
+    .. grid-item-card::  MIRTE Master
+       :img-bottom: /_static/media/MIRTE_master.png
+       :link: ../master/index
+       :link-type: doc
