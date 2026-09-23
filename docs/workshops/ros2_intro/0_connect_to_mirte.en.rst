@@ -47,7 +47,8 @@ the sticker on the robot.
       http://mirte.local/code/?folder=/home/mirte/
 
 In order to type command, you need to open a terminal in VS code
-(View > Terminal).
+(View > Terminal). But you are of course also free to work from 
+another terminal and just ssh into the robot.
 
 .. admonition:: info
 

@@ -10,15 +10,15 @@
 One of the core nodes on MIRTE is the 
 mirte_telemetrix node. That node is constantly communicating with the 
 microcontroller to get the latest sensordata, and control the motors. 
-So we first need to start that node:
+So we can start all the MIRTE nodes again:
 
 .. code-block:: console
 
-   mirte$ ros2 launch mirte_telemetrix telemetrix.launch
+   mirte$ sudo systemctl start mirte-ros
 
 .. admonition:: info
 
-  This node migth already be running. You can check this with:
+  It might take some time for all the nodes to be started. You can check this with:
 
   .. code-block:: console
 
@@ -47,9 +47,9 @@ But you can also see the data from the ultrasonic sensors coming in:
 
 .. code-block:: console
  
-   mirte$ ros2 topic echo /io/distance/left
+   mirte$ ros2 topic echo /io/distance/rear_left
 
-At one of the lines, you can see the distance measured by the sensor in cm.
+At one of the lines, you can see the distance measured by the sensor in meter.
 You can also get some other information (like bandwidth used, update
 frequency, message type, and delay). You can see the full list op options:
 

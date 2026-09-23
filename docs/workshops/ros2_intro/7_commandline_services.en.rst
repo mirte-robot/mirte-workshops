@@ -17,8 +17,8 @@ to respond.
 
 Like with topics, you can also commincate with services usign the 
 commandline. For the next steps, you need to make sure the MIRTE
-telemetrix node is running, and iff this is not the case 
-:abbr:`start it ($ ros2 launch mirte_telemetrix telemetrix.launch)`.
+telemetrix node is running, and if this is not the case 
+:abbr:`start it ($ sudo systemctl start mirte-ros)`.
 
 First we can have a look which services are active in the ROS system:
 
@@ -31,7 +31,7 @@ First we can have a look which services are active in the ROS system:
    When you want to drive around with the robot, please make sure that
    the robot is either on the groud, or unable to drive from the table.
    
-One of the services is called '/mirte/set_left_speed', which will set 
+One of the services is called '/io/motor/front_left/set_speed', which will set 
 the speed of the left motor (values range from -100 to 100). You
 can set the speed of the motor:
 
@@ -45,8 +45,18 @@ can set the speed of the motor:
 
 .. code-block:: console
  
-   mirte$ ros2 service call /mirte/set_left_speed mirte_msgs/srv/SetMotorSpeed "{speed: 50}"
-   
+   mirte$ ros2 service call /io/motor/front_left/set_speed mirte_msgs/srv/SetMotorSpeed "{speed: 50}"
+
+.. admonition:: warning
+
+   This will start the motor, and probably also stop the motor. This is because
+   ROS2 control is also controlling the robot, and did not get a command, so it
+   actively tries to stop it. You can disable this controller with:
+
+   .. code-block:: console
+ 
+      mirte$ ros2 control switch_controllers --deactivate  mirte_base_controller
+
 This will set the motor speed to 50% forward. You will probably want to
 set the speed back to 0 againg to stop the motor.
 

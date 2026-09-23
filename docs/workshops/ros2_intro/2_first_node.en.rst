@@ -7,6 +7,16 @@
 1.2 First ROS2 node
 ###################
 
+To get your first node running, it helps to shutdown all the nodes
+that are started by default on the MIRTE robot. This can be done by
+typing in the terminal:
+
+.. code-block:: console
+
+   $ sudo systemctl stop mirte-ros
+
+This will shutdown all MIRTE-related ROS nodes.
+
 As you’ve seen in the presentation, one of the core elements of ROS2
 are nodes. These are just small executables that connect with the ROS2 
 API. In this tutorial you will learn how to create your first ROS node.
@@ -32,26 +42,21 @@ my_node.py:
   if __name__ == '__main__':
     main()
 
+You can now run this program by typing the following in the terminal:
 
-By pressing play in the top right, you should see the string
-'Hello world' being printed on the screen once.
+.. code-block:: console
 
-.. admonition:: info
+   $ python3 my_node.py
 
-  Pressing play is similar to running the following command:
-
-  .. code-block:: console
-
-     $ python3 my_node.py
-
+You should see the string 'Hello world' being printed on the screen once.
 If you did it correctly the node is still spinning, so the 
 terminal is still busy. You can check that the node is indeed 
-running by opening another terminal:
+running by opening another terminal ():
 
 .. code-block:: console
    :class: margin
 
-   /my_first_node
+   /hello_world_node
    
 .. code-block:: console
 

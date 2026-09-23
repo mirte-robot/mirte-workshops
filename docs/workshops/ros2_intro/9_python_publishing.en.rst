@@ -31,20 +31,8 @@ linear.x (forward/backward) and angular.z (turning around its axis).
 
 This also means there needs to be someting (a ROS node) that is listening to a topic
 with this Twist type. Usually this is a topic with 'cmd_vel' (command velocity) in its
-name. Up till now, we only started the ROS telemtrix node to commuicate with the 
-mictrocontroller. From now on it makes more sense to start the full MIRTE ROS system.
-To do so, you first need to stop the telemetrix node by pressing CTRL-C in the terminal
-where we started this node. Only then are we able to start the full MIRTE ROS system:
-
-.. code-block:: console
-
-   $ ros2 launch mirte_bringup minimal.launch.py
-   
-This will start the telemtrix node, but also some others responsible for controlling the
-motors. And again you can have a look which :abbr:`nodes are running ($ ros2 node list)`,
-find out that the cmd_vel topis :abbr:`is called /diffbot_base_controller/cmd_vel_unstamped
-($ ros2 topic list)`.
-
+name. With all nodes running you should be able to
+ :abbr:`identify which topic is expecting a Twist message ($ ros2 topic list)`.
 We again have all the information we need to publish to this topic:
 
 1) :abbr:`Creating a new node called drive.py (in ~/training_ws/src/my_package/mypackage)`
@@ -60,7 +48,7 @@ We again have all the information we need to publish to this topic:
    
    .. code-block:: console
 
-      $ ros2 topic pub --once /diffbot_base_controller/cmd_vel_unstamped geometry_msgs/msg/Twist "{linear: {x: 1}}"
+      $ ros2 topic pub --once /mirte_base_controller/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.5}}"
    
 
 .. code-block:: python
@@ -76,14 +64,14 @@ We again have all the information we need to publish to this topic:
         super().__init__('drive_publisher')
         self.publisher_ = self.create_publisher(
             Twist, 
-            '/diffbot_base_controller/cmd_vel_unstamped', 
+            '/mirte_base_controller/cmd_vel', 
             10)
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
 
      def timer_callback(self):
         msg = Twist()
-        msg.linear.x = 1.0  # m/s
+        msg.linear.x = 0.5  # m/s
         self.publisher_.publish(msg)
         self.get_logger().info('Publishing linear.x: "%f"' % msg.linear.x)
 

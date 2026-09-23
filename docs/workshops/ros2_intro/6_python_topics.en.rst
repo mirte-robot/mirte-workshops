@@ -23,7 +23,7 @@ kind of information is it sending.
 
 .. code-block:: console
  
-   mirte$ ros2 topic type /mirte/distance/left
+   mirte$ ros2 topic type /io/distance/rear_left
 
 
 .. admonition:: info
@@ -62,7 +62,7 @@ Create a new node in your package and run it:
         super().__init__("subscriber_node")
         self._subscription = self.create_subscription(
            Range,
-           "/mirte/distance/left",
+           "/io/distance/rear_left",
            self.receive_message_callback,
            1
         )

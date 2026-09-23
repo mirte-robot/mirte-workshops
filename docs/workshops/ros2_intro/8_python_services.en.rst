@@ -23,7 +23,7 @@ still get the type:
 
 .. code-block:: console
  
-   mirte$ ros2 service type /mirte/set_right_speed
+   mirte$ ros2 service type /io/motor/front_left/set_speed
 
 And like the services, we can also have a look at how the interface
 itself is defined. 
@@ -75,7 +75,7 @@ reminder, this involves:
         super().__init__("client_example_node")
         self._client = self.create_client(
            SetMotorSpeed, 
-           "/mirte/set_left_speed")
+           "/io/motor/front_left/set_speed")
 
         while not self._client.wait_for_service(timeout_sec=10.0):
            self.get_logger().info("Service not available")
