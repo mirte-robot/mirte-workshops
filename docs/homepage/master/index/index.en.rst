@@ -1,3 +1,21 @@
+.. card:: ROS2 introduction
+    :link: ../workshops/ros2_intro
+
+    In this workshop you will learn about the basic concepts of ROS2
+    and program the robot using ROS2 topics and services.
+    +++
+    :octicon:`clock;1em;sd-text-info` 1 hour 
+
+
+.. card:: ROS2 Point Cloud Library
+    :link: ../workshops/ros2_pcl
+
+    In this workshop you will get an introduction on how to use
+    the Point Cloud Library (PCL) in ROS2.
+    +++
+    :octicon:`clock;1em;sd-text-info` 1 hour 
+
+
 .. card:: Package Delivery
     :link: https://github.com/MartijnWisse/mirte_workshop
 
