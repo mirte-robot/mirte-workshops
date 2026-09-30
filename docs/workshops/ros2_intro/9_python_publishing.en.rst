@@ -32,7 +32,7 @@ linear.x (forward/backward) and angular.z (turning around its axis).
 This also means there needs to be someting (a ROS node) that is listening to a topic
 with this Twist type. Usually this is a topic with 'cmd_vel' (command velocity) in its
 name. With all nodes running you should be able to
- :abbr:`identify which topic is expecting a Twist message ($ ros2 topic list)`.
+:abbr:`identify which topic is expecting a Twist message ($ ros2 topic list)`.
 We again have all the information we need to publish to this topic:
 
 1) :abbr:`Creating a new node called drive.py (in ~/training_ws/src/my_package/mypackage)`
