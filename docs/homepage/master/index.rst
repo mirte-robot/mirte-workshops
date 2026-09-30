@@ -1,6 +1,6 @@
 :orphan:
 
-MIRTE Lite workshops
-====================
+MIRTE Master workshops
+======================
 
 .. include:: index/index.rst
