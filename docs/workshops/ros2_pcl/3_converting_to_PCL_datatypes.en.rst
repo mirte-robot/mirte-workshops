@@ -56,4 +56,8 @@ With these changes, the package should again be able to build an run:
    $ colcon build --packages-select pcl_workshop
    $ ros2 run pcl_workshop my_pcl_filter
 
+.. admonition:: info
+
+   Make sure that you compile from your workspace folder.
+
 

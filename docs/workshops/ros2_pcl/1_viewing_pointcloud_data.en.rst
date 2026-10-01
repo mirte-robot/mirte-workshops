@@ -35,3 +35,13 @@ and not on the robot itself.
    .. code-block:: console
 
       $ htop
+
+.. admonition:: info
+
+   This might cause ROSboard to crash (you will not be able to
+   reload thev webpage). If this is the case, you can restart 
+   the web interface:
+
+   .. code-block:: console
+
+      $ sudo systemctl restart mirte-web-interface

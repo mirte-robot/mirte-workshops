@@ -31,7 +31,7 @@ Initilize this publisher in the constructor:
 
     publisher_ =
        this->create_publisher<sensor_msgs::msg::PointCloud2>(
-       "/filtered_cloud",
+       "/camera/depth/points_filtered",
        qos);
 
     subscription_ =
@@ -61,7 +61,7 @@ callback function:
      downsampled_cloud->size());
 
    auto output_msg = sensor_msgs::msg::PointCloud2();
-   pcl::toROSMsg(*cloud, output_msg);
+   pcl::toROSMsg(*downsampled_cloud, output_msg);
    output_msg.header = msg->header;
    publisher_->publish(output_msg);
 
